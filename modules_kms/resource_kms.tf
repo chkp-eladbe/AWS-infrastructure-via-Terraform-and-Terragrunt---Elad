@@ -8,4 +8,6 @@ resource "aws_kms_alias" "elad_alias_kms" {
   
   name =  var.alias
   target_key_id = aws_kms_key.elad-test-kms.id
+
+
 }

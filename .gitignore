@@ -1,0 +1,6 @@
+environments/eu-west-1/kms_key/.terragrunt-cache/crBXb_toGabWJ_ECpEOo8uUBUOM/E1F21HbPRTpP31lDFzDqZ4mixM0/.terraform.lock.hcl
+environments/eu-west-1/kms_key/.terraform.lock.hcl
+environments/eu-west-1/kms_key/.terragrunt-cache/crBXb_toGabWJ_ECpEOo8uUBUOM/E1F21HbPRTpP31lDFzDqZ4mixM0/.terragrunt-module-manifest
+.terragrunt*
+*.json
+.terraform/providers/registry.terraform.io/hashicorp/aws/5.43.0/linux_amd64/terraform-provider-aws_v5.43.0_x5

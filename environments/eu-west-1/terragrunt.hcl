@@ -1,10 +1,9 @@
-remote_state{
+remote_state {
     backend = "s3"
 
     generate = {
         path = "backend.tf"
         if_exists = "overwrite_terragrunt"
-
     }
 
     config = {
@@ -12,7 +11,26 @@ remote_state{
         key = "${path_relative_to_include()}/terraform.tfstate"
         region = "eu-west-1"
         encrypt = true
-        profile = "default"
-       
+        profile = "default"   
     }
+}
+
+terraform {       
+    extra_arguments "variables" {
+        commands = get_terraform_commands_that_need_vars()
+        optional_var_files = [
+            find_in_parent_folders("environment.tfvars", "ignore")
+        ]
+    }
+}
+
+generate "provider"  {
+    path = "provider.tf"
+    if_exists = "overwrite_terragrunt"
+    contents = <<EOF
+        provider "aws" {
+            profile = "default"
+            region = "eu-west-1"
+        }
+    EOF
 }
