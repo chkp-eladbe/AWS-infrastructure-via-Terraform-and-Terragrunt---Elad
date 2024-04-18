@@ -4,3 +4,4 @@ environments/eu-west-1/kms_key/.terragrunt-cache/crBXb_toGabWJ_ECpEOo8uUBUOM/E1F
 .terragrunt*
 *.json
 .terraform/providers/registry.terraform.io/hashicorp/aws/5.43.0/linux_amd64/terraform-provider-aws_v5.43.0_x5
+.terraform.lock*
